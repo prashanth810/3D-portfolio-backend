@@ -9,7 +9,7 @@ import mailroutes from "./routes/MailRoutes.js";
 const app = express();
 app.use(helmet());
 app.use(cors({
-    origin: "*",
+    origin: "https://3dportfolio-blue-seven.vercel.app",
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
 }));
