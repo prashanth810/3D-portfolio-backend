@@ -14,7 +14,7 @@ export const sendmailtocontact = async (req, res) => {
         }
 
         await MailModel.sendMail({
-            from: `"${name}" ${email}`,
+            from: `Portfolio Contact ${name} ${email}`,
             to: Envs.USER_MAIL,
             replyTo: email,                  // ✅ reply goes to USER
             subject: `New Collaboration Request from Portfolio ${name} 🚀`,
@@ -23,7 +23,7 @@ export const sendmailtocontact = async (req, res) => {
 
         return res.status(200).json({
             success: true,
-            message: "Your message has been sent to the owner successfully",
+            message: "Mail sent successfully",
         });
 
     } catch (error) {

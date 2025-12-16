@@ -9,6 +9,9 @@ const MailModel = nodemailer.createTransport({
         user: Envs.USER_MAIL, // ower mail id
         pass: Envs.APP_PASS, // sending mail have password 
     },
+    connectionTimeout: 10000, // ⏱ 10 sec
+    greetingTimeout: 10000,
+    socketTimeout: 10000,
     tls: {
         rejectUnauthorized: false,
     },
