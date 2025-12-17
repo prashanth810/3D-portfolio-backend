@@ -21,10 +21,14 @@ export const sendmailtocontact = async (req, res) => {
             html: ContactMails(name, email, message),
         });
 
+        console.log(req.body);
+        console.log(res, 'resssssssssss')
+
         return res.status(200).json({
             success: true,
             message: "Mail sent successfully",
         });
+
 
     } catch (error) {
         console.error("❌ Mail sending failed:", error);
